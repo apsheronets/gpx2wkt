@@ -69,6 +69,16 @@ let print_as_wkt gpx =
 
 let () =
   let gpx = gpx_of_channel stdin in
-  print_as_wkt gpx;
-  ()
+  (* check if it empty or one-point track *)
+  let counter = ref 0 in
+  List.iter
+    (List.iter
+      (List.iter
+        (fun _ -> incr counter))) gpx;
+  if !counter <= 2
+  then
+    (eprintf "You need at least 2 points track!\n";
+    exit 1)
+  else
+    print_as_wkt gpx
 
