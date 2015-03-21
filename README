@@ -1,5 +1,5 @@
-Gpxer - GPX to PNG tool
-=======================
+gpx2wkt - converts from GPX to Well-known Text
+==============================================
 
 Building:
 ----------
@@ -11,9 +11,7 @@ First you need to get:
 * findlib for ocamlfind command
   (http://projects.camlcity.org/projects/findlib.html);
 * extlib for OCaml (http://code.google.com/p/ocaml-extlib/);
-* imagemagick for OCaml >= 0.34 (http://www.linux-nantes.org/~fmonnier/OCaml/ImageMagick/);
 * xmlm for OCaml (http://erratique.ch/software/xmlm);
-* curl (http://curl.haxx.se/) (not a library, just /usr/bin/curl).
 
 Then simply run
 
@@ -27,4 +25,4 @@ Installation:
 Usage:
 -------
 
-> gpxer < /path/to/file.gpx
+> gpx2wkt < /path/to/file.gpx

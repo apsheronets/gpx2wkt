@@ -7,7 +7,7 @@ basedir=`readlink -f $basedir/../`
 cd $basedir || exit 1
 
 version=`head -n1 VERSION`
-name=gpxer
+name=gpx2wkt
 tar=$name-$version.tar.gz
 tar_dst=$HOME/htdocs/src/$name
 chroot_dir=/home/komar/chroot/wheezy-x86

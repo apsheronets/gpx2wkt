@@ -1,7 +1,7 @@
 PACKAGES = extlib,libMagick,xmlm
 FILES = xmlm_shit.ml main.ml
 
-NAME = gpxer
+NAME = gpx2wkt
 VERSION := $(shell head -n 1 VERSION)
 CAMLC   = ocamlfind ocamlc   $(LIB)
 CAMLOPT = ocamlfind ocamlopt $(LIB)
@@ -48,13 +48,10 @@ $(STATIC): $(OPTOBJS)
 install: $(BYTE) $(OPT)
 	install -m 755 $(BYTE) $(PREFIX)/$(BYTE)
 	install -m 755 $(OPT)  $(PREFIX)/$(OPT)
-	install -d share/$(NAME) $(PREFIX)/share/$(NAME)
-	install -m 644 share/$(NAME)/* $(PREFIX)/share/$(NAME)
 
 uninstall:
 	rm $(PREFIX)/$(BYTE)
 	rm $(PREFIX)/$(OPT)
-	rm -r $(PREFIX)/share/$(NAME)
 
 clean:
 	-rm -f *.cm[ioxa] *.cmx[as] *.o *.a *~
